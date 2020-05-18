@@ -1,0 +1,33 @@
+#about-us{
+    min-height: 100vh;
+}
+#about-us img {
+    height: 35vh;
+    width: 100%;
+    object-fit: cover;
+}
+.about-content{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 50% [col-start]);
+    margin: 20px 0;
+}
+.about-footer{
+    display: grid;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 480px){
+    #about-us {
+        padding: 15px;
+    }
+    .about-content {
+        display: block;
+    }
+    .page-header {
+        padding: 15px;
+    }
+    .page-header h1 {
+        line-height: 1.3;
+    }
+}

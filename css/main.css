@@ -1,0 +1,217 @@
+@import url("./all.min.css");
+@import url("./navbar.css");
+@import url("./single-post.css");
+@import url("./about-us.css");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, 'Open Sans', sans-serif;
+}
+
+:root {
+    --gv-blue: #2376ae;
+    --light-gray: rgba(0, 0, 0, 0.5);
+    --gv-black: #222;
+    --gv-light-blue: #2376ae13;
+}
+
+
+/* Importing Logo Fonts */
+
+@font-face {
+    font-family: Monoton;
+    src: url('./../fonts/Monoton-Regular.ttf');
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.no-style {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 2;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 2;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover,
+a:active{
+    color: var(--gv-black);
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color: transparent;
+    border: solid 1px var(--gv-blue);
+    font-size: 14px;
+}
+.btn:hover{
+    background-color: var(--gv-blue);
+    color: #fff;
+}
+
+
+/* Index Styles */
+
+
+/* 1. Blog Layout */
+
+#blog-posts {
+    margin: 50px 0;
+}
+
+.posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.posts .post {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33%;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+
+/* 2. Post styles */
+
+.post-image {
+    box-shadow: 0px 0px 10px 0px rgba(2, 2, 2, 0.23);
+}
+.post .post-name a {
+    color: var(--gv-blue);
+    font-size: 14px;
+    font-style: oblique;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    line-height: 3;
+}
+
+.post .post-cat {
+    color: var(--gv-blue);
+}
+
+.post .date {
+    color: var(--light-gray);
+}
+
+.post .post-name {
+    color: var(--gv-black);
+}
+
+
+/* FOOTER STYLES */
+
+#footer {
+    position: absolute;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.footer-content a {
+    color: var(--gv-blue);
+}
+
+.f-links a {
+    padding: 0 0 0 10px;
+}
+
+.social-links i {
+    font-size: 25px;
+    color: var(--gv-blue);
+    border: none;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.social-links i:hover {
+    color: red;
+}
+
+
+/* RESPONSIVE STYLES */
+
+@media screen and (max-width: 480px) {
+    /* 1. Post Layout */
+    .posts {
+        display: block;
+    }
+    .posts .post {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 33%;
+        padding: 0 20px;
+    }
+    .posts .post:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    /*  */
+    .footer-content {
+        display: block;
+        text-align: center;
+    }
+    .social-links {
+        padding: 10px 0;
+    }
+    #footer {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .posts {
+        padding: 15px;
+    }
+    .footer-content {
+        padding: 25px;
+    }
+}
